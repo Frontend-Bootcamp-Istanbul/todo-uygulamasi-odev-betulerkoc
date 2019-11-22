@@ -99,12 +99,14 @@ class App extends Component {
             <TodoList
                 title="Tamamlanmamış Todolar"
                 todos={[]}
+                todos = {this.state.todos.filter((todo)=>{return(todo.checked==false)})}
                 onTodoRemove={this.removeTodo}
                 onCheckedToggle={this.toggleCompleteStatus} />
 
             <TodoList
                 title="Tamamlanmış Todolar"
                 todos={[]}
+                todos = {this.state.todos.filter((todo)=>{return(todo.checked==true)})}
                 onTodoRemove={this.removeTodo}
                 onCheckedToggle={this.toggleCompleteStatus} />
         </div>
